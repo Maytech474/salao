@@ -1,5 +1,5 @@
 h1 {
-    font-size: 37px;
+    font-size: 20px;
     font-weight: 900;
     width: 414px;
     letter-spacing: 0.040em;
@@ -62,56 +62,7 @@ p.desc-text{
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-mail:before {
-    content: "\e600";
-}
 
-.icon-github:before {
-    content: "\e601";
-}  
-
-.icon-twitter:before {
-    content: "\e602";
-}
-
-.icon-linkedin:before {
-    content: "\e603";
-}
-
-.carousel-slide{
-    float: right !important;
-    margin-right: -15px;
-} 
-
-li.item{
-    position: relative; 
-    width: 100%; /* for IE 6 */
-
-    background: rgba(211, 15, 34, 1);
-}
-
-.icon_knife {
-    width: 40px;
-    height: 20px;
-    margin: 30px auto;
-    opacity: 0.8;
-    background: url(data:images\6cfed4cba9760857f22418ed294e8aca.gif) no-repeat center;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-     
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    -o-transition-property: -o-transform;
-    transition-property: transformm;
-}
-
-.icon_knife:hover {
-    -webkit-transform:rotate(180deg);
-    -moz-transform:rotate(180deg);
-    -o-transform:rotate(180deg);
-}
 
 body, html {
     margin: 0;
@@ -335,10 +286,13 @@ FIRST FOOTER CONTENT
 .first_footer {
     background-color: #1e1e1e;
     text-align: center;
+    justify-content: flex-end;
 }
 .social_heading,
 .social_info {
     display: block;
+    justify-content: center;
+    align-items: center;
 }
 .social_heading {
     font-size: 28px;
@@ -495,9 +449,9 @@ p.sub-footer-text a{
     background:#8BC3A3;
     display:center ;
     justify-content: center;
-    height: 60px; 
+    height: 50px; 
     width:120px;
-    margin:20px 0 0px 0;
+    margin:30px 0 0px 0;
     border-radius:3px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -604,7 +558,7 @@ MEDIA QUERIES TABLET
     }
     nav{
         
-        display: block;
+        display: inline-block;
         position: fixed;
         width: 100%;
         height: 40px;
@@ -710,13 +664,16 @@ MEDIA QUERIES TABLET
 
     section.social_connect {
         background-color: black;
-        text-align: center;
+      
         margin-bottom: 50px;
+        align-content: center;
+        justify-content:center
   }
 
     .social_heading {
         font-size: 33px;
         margin: 50px 0 0 0;
+        justify-content: center;
     }
 
     .social_info a {
@@ -728,7 +685,7 @@ MEDIA QUERIES TABLET
     }
 
     .social_info a {
-        display: inline-block;
+        display: flex-end;
         margin: 0 auto;
         width: 325px;
     } 
@@ -835,7 +792,7 @@ MEDIA QUERIE DESKTOP
 
 
 
-.br-50 {
+.logo-1 {
     border-radius: 50%;
     border: 4px solid  rgba(85, 184, 120, 1);
     display: flex;
@@ -846,7 +803,7 @@ MEDIA QUERIE DESKTOP
     
     }
 
-    .wh-300 {
+    .logo-2 {
         width: 80px;
         height: 80px;
         display: flex;
@@ -883,19 +840,61 @@ MEDIA QUERIE DESKTOP
         height: 100%;
         background: url("../images/overlay-pattern.png") #000000;
         opacity: 0.3;
-        
-       
-      }
-
-      .btn {
+        }
+        #btn {
         display: left;
-      
         gap: 10px;
         gap: 10px 20px; /* row-gap column gap */
         row-gap: 10px;
         column-gap: 20px;
-      }
+        }
 
-      #form{
-          justify-items: flex-end;
-      }
+        #form{
+            justify-items: flex-end;
+        }
+
+        #btn{
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.3em;
+            color: white;
+            border: 2px solid  #96E16B;
+            align-items: flex-end;
+            padding: 1px 2px;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            transition: color 1s;
+            font-family: 'Pacifico', cursive;
+            
+        }
+
+        #btn:hover{
+            color: rgba(85, 184, 120, 1);
+        }
+
+        #btn::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50px;
+            width: 0;
+            height: 100%;
+            background-color: white;
+            transform: skewX(35deg);
+            z-index: -1;
+            transition: Width 1s;
+        }
+
+        #btn:hover::before{
+            width: 150%;
+        }
+
+#rodape{
+
+    justify-content: center;
+    align-items: center;
+}
+
+

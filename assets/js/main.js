@@ -2,16 +2,16 @@
 
 	$(document).ready(function () {
 		$(document).on("scroll", onScroll);
- 
+
 		$('a[href^="#"]').on('click', function (e) {
 			e.preventDefault();
 			$(document).off("scroll");
- 
+
 			$('a').each(function () {
 				$(this).removeClass('navactive');
 			})
 			$(this).addClass('navactive');
- 
+
 			var target = this.hash;
 			$target = $(target);
 			$('html, body').stop().animate({
@@ -22,7 +22,7 @@
 			});
 		});
 	});
- 
+
 	function onScroll(event){
 		var scrollPosition = $(document).scrollTop();
 		$('.nav li a').each(function () {
@@ -37,7 +37,7 @@
 			}
 		});
 	
-       
+    
         $(function(){
             $('#portfolio').mixitup({
                 targetSelector: '.item',
@@ -45,7 +45,7 @@
             });
         });
 
-          $(function() {
+        $(function() {
             $( "#datepicker" ).datepicker();
         });
     
