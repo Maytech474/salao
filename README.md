@@ -1,4 +1,1 @@
-Restaurant
-==========
-
-A template for Restaurant business
+Salão Teamplate
